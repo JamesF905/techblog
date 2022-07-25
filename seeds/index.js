@@ -1,28 +1,8 @@
 const sequelize = require('../config/connection');
+const { User, Blog } = require('../models');
 
-const seedUsers = require('./user-seeds');
-const seedBlogs = require('./blog-seeds');
-
-const seedAll = async () => {
-    //sync to database
-    await sequelize.sync({ force: true });
-    console.log('\n----- DATABASE SYNCED -----\n');
-  
-    //Seed all the models
-
-    await seedUsers();
-    console.log('\n----- Users SEEDED -----\n');
-
-    await seedBlogs();
-    console.log('\n----- Blogs SEEDED -----\n');
-
-    //exit
-    process.exit(0);
-};
-
-seedAll();
-
-
+const seedUsers = require('./user-seeds.json');
+const seedBlogs = require('./blog-seeds.json');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });  
@@ -31,9 +11,9 @@ const seedAll = async () => {
       returning: true,
     });
   
-    for (const project of projectData) {
-      await Project.create({
-        ...project,
+    for (const blog of seedBlogs) {
+      await Blog.create({
+        ...blog,
         user_id: users[Math.floor(Math.random() * users.length)].id,
       });
     }
