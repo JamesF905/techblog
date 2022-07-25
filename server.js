@@ -1,10 +1,16 @@
 const path = require('path');
 const express = require('express');
-const db = require('./config/connection');
 const routes = require('./controllers');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const helpers = require('./utils/helpers');
 
+//set up the database connection
+const db = require('./config/connection');
+//start express
 const app = express();
-const PORT = process.env.PORT || 3006;
+//set the port
+const PORT = process.env.PORT || 3003;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
