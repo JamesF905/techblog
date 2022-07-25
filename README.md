@@ -5,7 +5,7 @@
 <img src="images/logo.png" alt="Logo" width="40%" style="border: 4px inset #444; background:#333; border-radius: 20px">
 </a>
 
-# E-Commerce Site
+# Tech Blog
 
 <p align="center">
 A CMS-style blog site, similar to a Wordpress site, running on Heroku. <br><br>By: <a href="https://github.com/JamesF905" target="_blank"><strong>James Fidlin</strong></a><br/>July, 21, 2022
