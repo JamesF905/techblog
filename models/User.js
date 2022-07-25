@@ -1,5 +1,7 @@
 // import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
+//import bcrypt for auth
+const bcrypt = require('bcrypt');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
@@ -41,6 +43,7 @@ User.init(
     created_on: {
         type: DataTypes.DATE,
         allowNull: false,
+        defaultValue: DataTypes.NOW,
     },
     updated_on: {
         type: DataTypes.DATE,
