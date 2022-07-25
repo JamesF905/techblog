@@ -1,6 +1,7 @@
-const seedUsers = require('./user-seeds');
-
 const sequelize = require('../config/connection');
+
+const seedUsers = require('./user-seeds');
+const seedBlogs = require('./blog-seeds');
 
 const seedAll = async () => {
     //sync to database
@@ -10,7 +11,10 @@ const seedAll = async () => {
     //Seed all the models
 
     await seedUsers();
-    console.log('\n----- CATEGORIES SEEDED -----\n');
+    console.log('\n----- Users SEEDED -----\n');
+
+    await seedBlogs();
+    console.log('\n----- Blogs SEEDED -----\n');
 
     //exit
     process.exit(0);
