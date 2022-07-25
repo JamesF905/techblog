@@ -1,0 +1,62 @@
+body,html{
+    background-color: aliceblue;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+body *{
+    color: rgb(20, 22, 24);
+}
+
+header{
+    background-color: brown;
+    flex:0;
+    width: 100%;
+    min-height: 100px;
+}
+
+header section{
+    background-color: antiquewhite;
+    max-width: 1080px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header section *{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+figure{
+    background-color: yellowgreen;
+    margin: 0;
+    min-height: 100%;
+}
+
+#logo{
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav{
+    background-color: chocolate;
+    min-height: 100%;
+}
+
+
+
+
+main{
+    background-color: crimson;
+    flex:1;
+}
+
