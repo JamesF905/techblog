@@ -2,5 +2,9 @@
   <h2>{{title}}</h2>
   <p>{{body}}</p>
   <p>Created by {{user.user_name}} on {{format_date date_created}}</p>
-  <a href="#">Link to comment</a>
+  {{#if logged_in}}
+      <button>Leave a comment</button>
+  {{else}}
+    <p>Log in to leave a comment</p>
+  {{/if}}
 </div>
