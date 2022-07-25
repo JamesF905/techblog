@@ -1,0 +1,41 @@
+<h2>Welcome, {{user_name}}!</h2>
+ 
+
+
+    <h3>Create a New Project:</h3>
+
+    <form id="addBlog">
+      <div>
+        <label for="blog-title">blog title:</label>
+        <input type="text" id="blog-title" name="blog-title" />
+      </div>
+      <div>
+        <label for="blog-body">content:</label>
+        <textarea id="blog-body" name="blog-body"></textarea>
+      </div>
+      <div>
+        <button type="submit">Create</button>
+      </div>
+    </form>
+  
+
+  {{#if blogs.length}}
+  <div id="blogList">
+    <h3>Current Projects:</h3>
+
+    {{#each blogs as |blog|}}
+    <div>
+      <div>
+        <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
+        <p>Created by you, on {{format_date blog.date_created}}</p>
+      </div>
+      <div>
+        <button data-id="{{blog.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+
+<script src="./js/profile.js"></script>
