@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User } = require('../models');
+const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 //THIS SECTION RENDERS THE HOMEPAGE
@@ -37,13 +37,12 @@ router.get('/blog/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
-        { model: Comment },
+        { model: Comment},
         
       ],
     });
 
     const blog = blogData.get({ plain: true });
-
     res.render('blog', {
       ...blog,
       logged_in: req.session.logged_in
