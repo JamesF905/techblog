@@ -22,7 +22,7 @@ User.init(
       autoIncrement: true,
       allowNull: false
     },
-    user_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true

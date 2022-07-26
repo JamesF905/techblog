@@ -1,26 +1,26 @@
 [
   {
-    "user_name": "joe",
+    "name": "joe",
     "email": "joe@gmail.com",
     "password": "password12345"
   },
   {
-    "user_name": "timmy",
+    "name": "timmy",
     "email": "tim@gmail.com",
     "password": "password12345"
   },
   {
-    "user_name": "james",
+    "name": "james",
     "email": "james@gmail.com",
     "password": "password12345"
   },
   {
-    "user_name": "rinoa",
+    "name": "rinoa",
     "email": "rinoa@gmail.com",
     "password": "password12345"
   },
   {
-    "user_name": "cecilia",
+    "name": "cecilia",
     "email": "cecilia@gmail.com",
     "password": "password12345"
   }
