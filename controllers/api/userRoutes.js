@@ -16,10 +16,9 @@ router.post('/', async (req, res) => {
   }
 });
 
-//Log in the user if they exist in the database, if not give them an error and exit
 router.post('/login', async (req, res) => {
   try {
-    alert("test");
+    
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
