@@ -37,7 +37,12 @@ router.get('/blog/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
-        { model: Comment},
+        { model: Comment,          
+          include: {
+          model: User,
+          attributes: ['name']
+          }
+        },
         
       ],
     });
@@ -46,6 +51,30 @@ router.get('/blog/:id', async (req, res) => {
     res.render('blog', {
       ...blog,
       logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/edit/:id', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const blogData = await Blog.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        { model: Comment},
+        
+      ],
+    });
+
+    const blog = blogData.get({ plain: true });
+    res.render('edit', {
+      ...blog,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);

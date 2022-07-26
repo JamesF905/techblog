@@ -2,7 +2,7 @@
  
 
 
-    <h3>Create a New Project:</h3>
+    <h3>Create a New Blog:</h3>
 
     <form class="form new-blog-form">
       <div class="form-group">
@@ -31,6 +31,7 @@
         <p>Created by you, on {{format_date blog.date_created}}</p>
       </div>
       <div >
+        <a href="/edit/{{blog.id}}"><button>EDIT</button></a>
         <button data-id="{{blog.id}}">DELETE</button>
       </div>
     </div>
