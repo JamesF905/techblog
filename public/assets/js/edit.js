@@ -1,8 +1,11 @@
 const editHandler = async (event) => {
     event.preventDefault();
+    alert("fire!");
 
     const title = document.querySelector('#edit-title').value.trim();
     const body = document.querySelector('#edit-body').value.trim();
+
+    alert(title);alert(body);
 
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
