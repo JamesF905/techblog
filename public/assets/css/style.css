@@ -60,3 +60,10 @@ main{
     flex:1;
 }
 
+main section{
+    background-color: antiquewhite;
+    max-width: 1080px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+

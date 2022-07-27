@@ -1,16 +1,24 @@
 const editHandler = async (event) => {
     event.preventDefault();
-    alert("fire!");
+console.log("in file");
+    //const title = document.querySelector('#edit-title input[id]=').value.trim();
+    //const body = document.querySelector('#edit-body').value.trim();
 
-    const title = document.querySelector('#edit-title').value.trim();
-    const body = document.querySelector('#edit-body').value.trim();
+    const title = document.querySelector('input[id="edit-title"]').value.trim();
+    const body = document.querySelector('textarea[id="edit-body"]').value.trim();
 
-    alert(title);alert(body);
+    
+      const post_id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
+    
 
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/blogs/${id}`, {
+    console.log(title);
+    console.log(body);
+    console.log(post_id);
+    if (post_id) {
+      console.log(post_id);
+      const response = await fetch(`/api/blogs/${post_id}`, {
         method: 'PUT',
         body: JSON.stringify({ title, body }),
         headers: {
