@@ -23,7 +23,7 @@ console.log("in file");
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to edit blog');
       }

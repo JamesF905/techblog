@@ -16,13 +16,15 @@
                 <a href="/">
                     <img id="logo" src="https://i.giphy.com/media/U4FkC2VqpeNRHjTDQ5/giphy.webp" />
                 </a>    
+                <a href="/">
                     <h1>Tech Blog</h1>
+                </a>    
             </figure>
                 
             <nav>
                  <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-                <a href="/profile">profile</a> |
+                <a href="/dashboard">dashboard</a> |
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
                 <a href="/login">login</a>
