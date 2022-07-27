@@ -2,7 +2,7 @@ const createNewComment = async (event) => {
     event.preventDefault();
     const blog_id = document.getElementById('comment_now').getAttribute('data-id');
     const body = document.querySelector('#comment-body').value.trim();
-    if (body) {
+    if (blog_id && body) {
       const response = await fetch(`/api/comments`, {
         method: 'POST',
         body: JSON.stringify({ blog_id, body }),

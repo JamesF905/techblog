@@ -50,7 +50,9 @@ nav{
     min-height: 100%;
 }
 
-
+nav a, nav button{
+    margin-left: 10px;
+}
 
 
 main{
@@ -63,3 +65,35 @@ main section{
     min-height: 100%;
 }
 
+.blog_card, .comment_card{
+    background-color: white;
+    margin: 20px 0;
+    box-shadow: 2px 2px 2px #333;
+}
+
+.blog_card h2, .blog_card h4{
+    background-color: #333;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.blog_card p, .comment_card p{
+    padding: 10px;
+}
+
+#logout{
+    background: none;
+	border: none;
+    cursor: pointer;
+}
+
+
+#logout:hover{
+    color: #065b83;
+}
+
+.comment_card h4{
+    background-color: #777;
+    padding: 10px;
+    color: aliceblue;
+}
