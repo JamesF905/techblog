@@ -15,7 +15,7 @@ A CMS-style blog site, similar to a Wordpress site, running on Heroku. <br><br>B
 ### Heroku Link
 
 <p align="center">
-    <a href=""><strong></strong></a>
+    <a href="https://arcane-mesa-64627.herokuapp.com/"><strong>https://arcane-mesa-64627.herokuapp.com/</strong></a>
 </p>
 
 ### Repo Link
@@ -168,4 +168,4 @@ James Fidlin is a Junior Full Stack Web Developer, studying at the University of
 [Github-shield]: https://img.shields.io/badge/Github-white?style=for-the-badge&logo=Github&logoColor=222
 [Github-url]: https://github.com/JamesF905
 
-[product-screenshot]: images/Project_Screenshot.gif
+[product-screenshot]: images/Project_Screenshot.png
